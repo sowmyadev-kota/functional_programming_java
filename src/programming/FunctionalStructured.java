@@ -28,8 +28,12 @@ public static boolean printNumberThatAreEven(Integer number) {
 public static void printAllNumbersFunctional(List<Integer> numbers) {
 	
 //	numbers.stream().forEach(FunctionalStructured::print);
+//	numbers.stream()
+//	.filter(FunctionalStructured::printNumberThatAreEven)
+//	.forEach(System.out::println);//Method reference
+	//Lambda usage
 	numbers.stream()
-	.filter(FunctionalStructured::printNumberThatAreEven)
+	.filter(number->number%2==0)
 	.forEach(System.out::println);//Method reference
 	
 
