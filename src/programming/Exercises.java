@@ -6,10 +6,17 @@ public class Exercises {
 public static void main(String[] args) {
 	//Exercise1
 	printOnlyNumbersOdd(List.of(12,6,7,4,5,7,8,4));
+	//Exercise2
+	List<String> courses = List.of("Spring","Springboot","API","Docker");
+	printAllCoursesIndividually(courses);
 }
 
 
-
+private static void printAllCoursesIndividually(List<String> courses) {
+	courses.stream()
+	.forEach(System.out::println);
+	
+}
 
 
 public static void printOnlyNumbersOdd(List<Integer> numbers) {
