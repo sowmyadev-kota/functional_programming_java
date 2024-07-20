@@ -16,6 +16,10 @@ public static void printAllNumbersStructured(List<Integer> numbers) {
 	}
 
 }
+public static boolean printNumberThatAreEven(Integer number) {
+	return (number%2==0);
+
+}
 //private static void print(int number) {
 //	
 //		System.out.println(number);
@@ -24,7 +28,10 @@ public static void printAllNumbersStructured(List<Integer> numbers) {
 public static void printAllNumbersFunctional(List<Integer> numbers) {
 	
 //	numbers.stream().forEach(FunctionalStructured::print);
-	numbers.stream().forEach(System.out::println);//Method reference
+	numbers.stream()
+	.filter(FunctionalStructured::printNumberThatAreEven)
+	.forEach(System.out::println);//Method reference
+	
 
 }
 }
