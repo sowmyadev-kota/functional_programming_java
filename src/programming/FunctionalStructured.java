@@ -16,14 +16,15 @@ public static void printAllNumbersStructured(List<Integer> numbers) {
 	}
 
 }
-private static void print(int number) {
-	
-		System.out.println(number);
-	
-}
+//private static void print(int number) {
+//	
+//		System.out.println(number);
+//	
+//}
 public static void printAllNumbersFunctional(List<Integer> numbers) {
 	
-	numbers.stream().forEach(FunctionalStructured::print);
+//	numbers.stream().forEach(FunctionalStructured::print);
+	numbers.stream().forEach(System.out::println);//Method reference
 
 }
 }
