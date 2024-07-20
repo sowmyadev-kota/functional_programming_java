@@ -9,6 +9,8 @@ public static void main(String[] args) {
 	//Exercise2
 	List<String> courses = List.of("Spring","Springboot","API","Docker");
 	printAllCoursesIndividually(courses);
+	//Exercise3
+	printcoursesContaingSpring(courses);
 }
 
 
@@ -18,6 +20,12 @@ private static void printAllCoursesIndividually(List<String> courses) {
 	
 }
 
+private static void printcoursesContaingSpring(List<String> courses) {
+	courses.stream()
+	.filter(course->course.contains("Spring"))
+	.forEach(System.out::println);
+	
+}
 
 public static void printOnlyNumbersOdd(List<Integer> numbers) {
 	numbers.stream()
