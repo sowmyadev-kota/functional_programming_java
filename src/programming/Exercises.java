@@ -12,6 +12,17 @@ public static void main(String[] args) {
 	//Exercise3
 	printcoursesContaingSpring(courses);
 	printcourseshavingAtleast4Characters(courses);
+	//Exercise5
+	printCubesofOddNumber(List.of(12,6,7,4,5,7,8,4));
+}
+
+
+private static void printCubesofOddNumber(List<Integer> numbers) {
+	numbers.stream()
+	.filter(number->number%2!=0)
+	.map(number->number*number*number)
+	.forEach(System.out::println);
+	
 }
 
 
