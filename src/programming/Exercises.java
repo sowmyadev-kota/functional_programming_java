@@ -11,6 +11,7 @@ public static void main(String[] args) {
 	printAllCoursesIndividually(courses);
 	//Exercise3
 	printcoursesContaingSpring(courses);
+	printcourseshavingAtleast4Characters(courses);
 }
 
 
@@ -23,6 +24,12 @@ private static void printAllCoursesIndividually(List<String> courses) {
 private static void printcoursesContaingSpring(List<String> courses) {
 	courses.stream()
 	.filter(course->course.contains("Spring"))
+	.forEach(System.out::println);
+	
+}
+private static void printcourseshavingAtleast4Characters(List<String> courses) {
+	courses.stream()
+	.filter(course->course.length()>=4)
 	.forEach(System.out::println);
 	
 }
