@@ -14,6 +14,16 @@ public static void main(String[] args) {
 	printcourseshavingAtleast4Characters(courses);
 	//Exercise5
 	printCubesofOddNumber(List.of(12,6,7,4,5,7,8,4));
+	//Exercise6
+	printCharactersInCourses(courses);
+}
+
+
+private static void printCharactersInCourses(List<String> courses) {
+	courses.stream()
+	.map(course->course +" "+course.length())
+	.forEach(System.out::println);
+	
 }
 
 
